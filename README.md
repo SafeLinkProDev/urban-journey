@@ -41,5 +41,6 @@ Application mobile de prévention des accidents, alertes vocales intelligentes, 
 ## A propos
 SafeLinkPro est une solution technologique dédiée à la sécurité routière, industrielle, communautaire et professionnelle.  
 Objectif : réduire les accidents, faciliter les alertes et protéger les utilisateurs sur le terrain.
+Mise à jour du README.md
 
 
