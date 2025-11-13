@@ -394,3 +394,11 @@ Un bouton permet de tester la voix SafeLinkPro.
 # 🔧 4. Dépendances utilisées
 
 Dans `pubspec.yaml` :
+Aucune autre dépendance n’est encore obligatoire.  
+Architecture volontairement légère pour garantir compatibilité Android.
+
+---
+
+# 📦 5. Comment exécuter le projet
+
+### 1️⃣ Installer Flutter (Android, Termux, Ubuntu)
