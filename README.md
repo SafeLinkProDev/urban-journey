@@ -49,3 +49,44 @@ assets/icons/.gitkeep
 assets/audio/.gitkeep
 assets/images/.gitkeep
 lib/main.dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const SafeLinkProApp());
+}
+
+class SafeLinkProApp extends StatelessWidget {
+  const SafeLinkProApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'SafeLinkPro',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        useMaterial3: true,
+      ),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('SafeLinkPro – Prototype Beta'),
+      ),
+      body: const Center(
+        child: Text(
+          'Bienvenue dans SafeLinkPro Beta',
+          style: TextStyle(fontSize: 20),
+        ),
+      ),
+    );
+  }
+}
