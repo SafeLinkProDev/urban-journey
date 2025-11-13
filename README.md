@@ -45,3 +45,4 @@ Mise à jour README.md
 docs/.keep
 app/.keep
 assets/.keep
+docs/.keep
