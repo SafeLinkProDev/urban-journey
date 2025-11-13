@@ -347,3 +347,50 @@ Ce document présente la structure technique du projet Flutter **SafeLinkPro-Bet
 ---
 
 # 🧩 1. Structure générale du projet
+---
+
+# 🎙️ 2. Modules fonctionnels
+
+### ✔️ Synthèse vocale (TTS)
+Gérée via **FlutterTTS**, utilisée pour :
+- lire les alertes vocales,
+- confirmer les modes de conduite,
+- simuler les instructions du conducteur.
+
+### ✔️ Détection bruit (prototype)
+Simule la détection d’un environnement bruyant.
+
+### ✔️ Gestion des écouteurs (prototype)
+Simule la connexion/déconnexion d’écouteurs Bluetooth.
+
+### ✔️ Système d’alerte  
+Pour l’instant, impression console → sera remplacé par :
+- envoi sécurisé,
+- mode hors-ligne,
+- cryptage,
+- géolocalisation automatique.
+
+---
+
+# 🚗 3. Mode Conduite : Interface & Actions
+
+L’application fournit deux modes :
+
+### 🔒 Mode **Sécurité Strict**
+- Le conducteur ne peut plus répondre aux appels.  
+- Un message vocal annonce l’activation.  
+- Le système enregistre l’alerte.
+
+### 🎧 Mode **Communication Sécurisée**
+- Activation uniquement si un casque est détecté.  
+- Messages vocaux autorisés via oreillette.  
+- Parfait pour agents de sécurité, conducteurs, interventions.
+
+### 🗣️ Test vocal
+Un bouton permet de tester la voix SafeLinkPro.
+
+---
+
+# 🔧 4. Dépendances utilisées
+
+Dans `pubspec.yaml` :
