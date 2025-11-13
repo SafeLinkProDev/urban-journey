@@ -310,3 +310,31 @@ class SafeLinkProApp extends StatelessWidget {
   }
 }
 pubspec.yaml
+name: safelinkpro_beta
+description: Prototype officiel SafeLinkPro – Urban Journey Edition
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_tts: ^4.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/icons/
+    - assets/audio/
+    - assets/images/
