@@ -48,3 +48,4 @@ assets/.gitkeep
 assets/icons/.gitkeep
 assets/audio/.gitkeep
 assets/images/.gitkeep
+lib/main.dart
