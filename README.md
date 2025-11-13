@@ -91,3 +91,22 @@ class HomePage extends StatelessWidget {
   }
 }
 lib/services/speech_service.dart
+import 'package:flutter_tts/flutter_tts.dart';
+
+class SpeechService {
+  final FlutterTts _tts = FlutterTts();
+
+  SpeechService() {
+    _tts.setLanguage("fr-FR");
+    _tts.setPitch(1.0);
+    _tts.setSpeechRate(0.5);
+  }
+
+  Future speak(String message) async {
+    await _tts.speak(message);
+  }
+
+  Future stop() async {
+    await _tts.stop();
+  }
+}
