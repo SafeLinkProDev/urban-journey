@@ -339,3 +339,11 @@ flutter:
     - assets/audio/
     - assets/images/
 README_TECHNIQUE.md
+# SafeLinkPro – Urban Journey (Prototype Beta)
+## Guide Technique & Architecture Flutter
+
+Ce document présente la structure technique du projet Flutter **SafeLinkPro-Beta**, incluant l’architecture, les services essentiels, les dépendances, et les instructions pour l’exécution et la compilation.
+
+---
+
+# 🧩 1. Structure générale du projet
