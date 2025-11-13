@@ -402,3 +402,4 @@ Architecture volontairement légère pour garantir compatibilité Android.
 # 📦 5. Comment exécuter le projet
 
 ### 1️⃣ Installer Flutter (Android, Termux, Ubuntu)
+### 2️⃣ Récupérer le projet
