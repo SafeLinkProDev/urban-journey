@@ -111,3 +111,9 @@ class SpeechService {
   }
 }
 lib/services/noise_service.dart
+class NoiseService {
+  // Simule une détection de bruit pour le prototype
+  bool isLoudEnvironment(double decibel) {
+    return decibel > 70; // seuil de bruit
+  }
+}
