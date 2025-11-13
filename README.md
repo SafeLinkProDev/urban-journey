@@ -44,3 +44,4 @@ Objectif : réduire les accidents, faciliter les alertes et protéger les utilis
 Mise à jour du README.md
 
 
+assets/.gitkeep
