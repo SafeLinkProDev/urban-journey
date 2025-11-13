@@ -445,3 +445,4 @@ Toute contribution est structurée et documentée via GitHub.
 
 **SafeLinkPro – Urban Journey Edition**  
 Sécurité. Conduite. Intelligence.
+.github/workflows/flutter-android.yml
