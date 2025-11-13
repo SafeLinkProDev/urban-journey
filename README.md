@@ -410,3 +410,38 @@ Architecture volontairement légère pour garantir compatibilité Android.
 
 Une fois Flutter opérationnel :
 Le fichier généré se trouvera dans :
+---
+
+# 🧠 7. Modules IA futurs
+
+## 🔹 A1 (Sécurité & Alerte)
+- Analyse environnementale (bruit, vitesse)
+- Mode conducteur intelligent
+- Détection écouteurs réelle
+- Synthèse vocale optimisée hors-ligne
+
+## 🔹 A2 (Assistance – Santé & Urgence)
+- Appels vocaux mains-libres
+- Conversion message text → voix + alerte GPS
+- Mode sans Internet amélioré
+
+---
+
+# 🤝 8. Licence & Collaboration
+Ce prototype est en construction active.  
+Toute contribution est structurée et documentée via GitHub.
+
+---
+
+# 🏁 9. Statut actuel (Novembre 2025)
+- ✔️ Interface Flutter opérationnelle  
+- ✔️ Mode Conduite (2 versions)  
+- ✔️ Synthèse vocale intégrée  
+- ✔️ Services de base prêts  
+- 🔄 Next step : compilation APK Termux  
+- 🔄 Next step : intégration IA A1  
+
+---
+
+**SafeLinkPro – Urban Journey Edition**  
+Sécurité. Conduite. Intelligence.
