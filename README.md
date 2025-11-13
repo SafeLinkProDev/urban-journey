@@ -118,3 +118,15 @@ class NoiseService {
   }
 }
 lib/services/bluetooth_service.dart
+class BluetoothService {
+  // Simule la détection des écouteurs
+  bool isHeadsetConnected = false;
+
+  void connectHeadset() {
+    isHeadsetConnected = true;
+  }
+
+  void disconnectHeadset() {
+    isHeadsetConnected = false;
+  }
+}
