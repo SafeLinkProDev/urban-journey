@@ -286,3 +286,26 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+import 'package:flutter/material.dart';
+import 'home.dart';
+
+void main() {
+  runApp(const SafeLinkProApp());
+}
+
+class SafeLinkProApp extends StatelessWidget {
+  const SafeLinkProApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'SafeLinkPro',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        useMaterial3: true,
+      ),
+      home: const HomeScreen(),
+    );
+  }
+}
