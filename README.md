@@ -138,3 +138,151 @@ class AlertService {
   }
 }
 lib/home.dart
+import 'package:flutter/material.dart';
+import 'services/speech_service.dart';
+import 'services/bluetooth_service.dart';
+import 'services/noise_service.dart';
+import 'services/alert_service.dart';
+
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final SpeechService _speechService = SpeechService();
+  final BluetoothService _bluetoothService = BluetoothService();
+  final NoiseService _noiseService = NoiseService();
+  final AlertService _alertService = AlertService();
+
+  bool _isNoisy = false;
+  String _lastAlert = "Aucune alerte envoyée pour le moment.";
+
+  void _activateStrictMode() {
+    final message =
+        "Alerte SafeLinkPro : Mode Sécurité Strict activé. Le conducteur ne peut pas répondre aux appels.";
+    _alertService.sendAlert(message);
+    _speechService.speak(message);
+    setState(() {
+      _lastAlert = "Mode Sécurité Strict activé.";
+    });
+  }
+
+  void _activateSafeCommunication() {
+    if (!_bluetoothService.isHeadsetConnected) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content:
+              Text("Aucun écouteur détecté (simulation). Connectez un casque."),
+        ),
+      );
+      return;
+    }
+
+    final message =
+        "Mode Communication Sécurisée activé. Les échanges se font via l’oreillette.";
+    _alertService.sendAlert(message);
+    _speechService.speak(message);
+    setState(() {
+      _lastAlert = "Mode Communication Sécurisée activé.";
+    });
+  }
+
+  void _testVoice() {
+    final message =
+        "Ceci est un test vocal SafeLinkPro Urban Journey, prototype beta.";
+    _speechService.speak(message);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final envText = _isNoisy ? "Environnement bruyant" : "Environnement normal";
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("SafeLinkPro – Mode Conduite (Beta)"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Text(
+              "SafeLinkPro – Urban Journey",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              envText,
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: 16),
+
+            // Simulation écouteurs
+            SwitchListTile(
+              title: const Text("Écouteur connecté (simulation)"),
+              value: _bluetoothService.isHeadsetConnected,
+              onChanged: (value) {
+                setState(() {
+                  if (value) {
+                    _bluetoothService.connectHeadset();
+                  } else {
+                    _bluetoothService.disconnectHeadset();
+                  }
+                });
+              },
+            ),
+
+            // Simulation environnement bruyant
+            SwitchListTile(
+              title: const Text("Environnement bruyant (simulation)"),
+              value: _isNoisy,
+              onChanged: (value) {
+                setState(() {
+                  _isNoisy = value;
+                  // On pourrait utiliser _noiseService ici plus tard
+                  _noiseService.isLoudEnvironment(value ? 80 : 40);
+                });
+              },
+            ),
+
+            const SizedBox(height: 16),
+
+            // Bouton Mode Sécurité Strict
+            ElevatedButton(
+              onPressed: _activateStrictMode,
+              child: const Text("Mode Sécurité Strict"),
+            ),
+            const SizedBox(height: 12),
+
+            // Bouton Mode Communication Sécurisée
+            ElevatedButton(
+              onPressed: _activateSafeCommunication,
+              child: const Text("Mode Communication Sécurisée"),
+            ),
+            const SizedBox(height: 12),
+
+            // Bouton test vocal
+            OutlinedButton(
+              onPressed: _testVoice,
+              child: const Text("Tester la voix (démo)"),
+            ),
+
+            const SizedBox(height: 24),
+            const Text(
+              "Dernière action :",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Text(_lastAlert),
+          ],
+        ),
+      ),
+    );
+  }
+}
