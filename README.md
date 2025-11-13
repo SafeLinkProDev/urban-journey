@@ -117,3 +117,4 @@ class NoiseService {
     return decibel > 70; // seuil de bruit
   }
 }
+lib/services/bluetooth_service.dart
