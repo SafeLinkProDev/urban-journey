@@ -47,3 +47,4 @@ app/.keep
 assets/.keep
 docs/.keep
 app/.keep
+assets/.keep
