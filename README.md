@@ -47,3 +47,4 @@ Mise à jour du README.md
 assets/.gitkeep
 assets/icons/.gitkeep
 assets/audio/.gitkeep
+assets/images/.gitkeep
