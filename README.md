@@ -338,3 +338,4 @@ flutter:
     - assets/icons/
     - assets/audio/
     - assets/images/
+README_TECHNIQUE.md
