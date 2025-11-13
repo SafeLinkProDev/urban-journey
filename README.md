@@ -45,3 +45,4 @@ Mise à jour du README.md
 
 
 assets/.gitkeep
+assets/icons/.gitkeep
