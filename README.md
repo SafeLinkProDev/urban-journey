@@ -131,3 +131,9 @@ class BluetoothService {
   }
 }
 lib/services/alert_service.dart
+class AlertService {
+  void sendAlert(String message) {
+    // Prototype d'envoi d'alerte
+    print("Alerte envoyée : $message");
+  }
+}
