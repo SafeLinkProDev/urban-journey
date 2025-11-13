@@ -43,3 +43,4 @@ SafeLinkPro est une solution technologique dédiée à la sécurité routière, 
 Objectif : réduire les accidents, faciliter les alertes et protéger les utilisateurs sur le terrain.
 Mise à jour README.md
 docs/.keep
+app/.keep
