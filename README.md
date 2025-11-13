@@ -409,3 +409,4 @@ Architecture volontairement légère pour garantir compatibilité Android.
 # 📱 6. Préparation du APK
 
 Une fois Flutter opérationnel :
+Le fichier généré se trouvera dans :
